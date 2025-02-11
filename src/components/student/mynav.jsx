@@ -1,23 +1,52 @@
-import React from "react";
-import "./coustom.css";
-class Nav extends React.Component {
-  constructor(props){
-    super(props);
-    this.state = {isShow: false}
-    this.toggle = this.toggle.bind(this);
-  }
-  toggle(){
-    this.setState({isShow:!this.state.isShow})
-  }
-  render(){
-    return (
-      <div className="nav-container">
-        <a onClick={this.toggle} className="mynav" href="#"><i className="fa fa-bars"></i></a>
-        
-        {this.state.isShow && <div className="nav-detail"><a href="/home">Home</a></div>}
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import "./slidebar.css";
+//import logo from "./logo.png"; 
+import { FaHome, FaUsers, FaChartBar, FaCog, FaSignOutAlt, FaBars } from "react-icons/fa";
+
+const Nav = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div className={`sidebar ${isOpen ? "open" : ""}`}>
+      
+      <div className="toggle-btn" onClick={() => setIsOpen(!isOpen)}>
+        <FaBars />
       </div>
-    );
-  }
-}
+
+      <div className="sidebar-header">
+        {isOpen && (<h3>MainBoard</h3>)}
+      </div>
+
+      <ul className="sidebar-menu">
+        <li>
+          <Link to="/home">
+            <FaHome className="icon" /> {isOpen && "Dashboard"}
+          </Link>
+        </li>
+        <li>
+          <Link to="/students">
+            <FaUsers className="icon" /> {isOpen && "Students"}
+          </Link>
+        </li>
+        <li>
+          <Link to="/reports">
+            <FaChartBar className="icon" /> {isOpen && "Reports"}
+          </Link>
+        </li>
+        <li>
+          <Link to="/settings">
+            <FaCog className="icon" /> {isOpen && "Settings"}
+          </Link>
+        </li>
+        <li className="logout">
+          <Link to="/logout">
+            <FaSignOutAlt className="icon" /> {isOpen && "Logout"}
+          </Link>
+        </li>
+      </ul>
+    </div>
+  );
+};
 
 export default Nav;

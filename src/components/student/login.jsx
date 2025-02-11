@@ -1,13 +1,14 @@
 import React from "react";
 import "./coustom.css";
+import { Link } from "react-router-dom";
 import Learning from "./login.png";
 function Login(){
   return (
-    <div className="bg-light d-block rounded d-flex border container login">
-       <img className="bg-primary w-100" src={Learning} alt="learning" />
+    <div className="bg-light d-block rounded border container login">
+       <img className="bg-primary login-img" src={Learning} alt="learning" />
        <form className="former form-group" method="post">
           <h3 className="font-weight-bold"><strong>Welcome to Board</strong></h3>
-          <p>Need an account? <a href="/create">signup</a></p>
+          <p>Student? <Link to="/students/login">Login</Link></p>
           <h4>Sign In</h4>
           <label className="labels" for="username">Username<span className="text-danger">*</span></label>
           <input className="form-control" id="username" type="text" name="username" value="admin.in" /><br/>
@@ -17,9 +18,9 @@ function Login(){
           <div className="d-flex justify-content-between">
            <input type="checkbox" />
            <label className="remember"> Remember me </label>
-           <a className="forget" href="/forget">Forget Password</a>
+           <Link to="/forget" className="forget">Forget Password</Link>
           </div>
-          <a className="btn btn-block btn-primary" href="/home" >Login </a>
+          <Link to="/home" className="btn btn-block btn-primary" >Login</Link>
           <br />
           <span className="center text-secondary">OR</span>
           <div className="other-login">

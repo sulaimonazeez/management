@@ -1,6 +1,7 @@
 import React from "react";
 import "./coustom.css";
 import Profile from "./1691413082957.jpg";
+import Dialog from "./box";
 class Administration extends React.Component{
   constructor(props){
     super(props);
@@ -13,14 +14,14 @@ class Administration extends React.Component{
   render(){
     return (
      <div>
-      <div onClick={this.myToggle} className="d-flex justify-content-between container-fluid">
+      <div onClick={this.myToggle} className="d-flex justify-content-between container-fluid view">
           <img src={Profile} alt="Admin" className="admin-pic" />
           <div>
              <h4>sulaimon</h4>
              <h5 className="text-primary">Administrator</h5>
           </div>
         </div>
-        {this.state.isClick && <div className="container myrelative"><div><button onClick={this.myToggle} className="btn btn-danger"><i className="fa fa-close"></i></button></div><div className="horiz"><img src={Profile} alt="Admin" className="admin-pic"/><div><h4>sulaimon</h4><h5 className="text-primary">Administration</h5></div></div><div className="myhori"><a href="/profile">Profile</a><br/><hr/><a href="/message">Inbox</a><br/><hr/><a href="/logout">Logout</a></div></div>}
+        {this.state.isClick && <Dialog myToggle={this.myToggle}/>}
        </div>
       )
     }
