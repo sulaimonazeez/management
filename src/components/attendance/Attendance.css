@@ -1,0 +1,170 @@
+.attendance-page {
+  padding: 30px;
+}
+
+/* HEADER */
+.attendance-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(30, 41, 59, 0.7);
+  padding: 20px;
+  border-radius: 18px;
+}
+
+.date-picker {
+  background: rgba(15, 23, 42, 0.9);
+  border: none;
+  color: #e5e7eb;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* SUMMARY */
+.summary {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 15px;
+}
+
+.summary-card {
+  background: rgba(15, 23, 42, 0.85);
+  padding: 18px;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.present {
+  color: #22c55e;
+  font-size: 28px;
+}
+
+.late {
+  color: #facc15;
+  font-size: 28px;
+}
+
+.absent {
+  color: #ef4444;
+  font-size: 28px;
+}
+
+/* RING */
+.ring {
+  position: relative;
+}
+
+.bg {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.1);
+  stroke-width: 3.8;
+}
+
+.progress {
+  fill: none;
+  stroke: #38bdf8;
+  stroke-width: 3.8;
+  stroke-linecap: round;
+}
+
+.ring span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#svg {
+  width: 80px;
+  height: 80px;
+}
+
+/* PANEL */
+.panel {
+  margin-top: 30px;
+  background: rgba(30, 41, 59, 0.65);
+  padding: 20px;
+  border-radius: 18px;
+}
+
+/* STUDENTS */
+.student-row {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+  gap: 12px;
+}
+
+.student-avatar {
+  width: 42px;
+  height: 42px;
+  background: #38bdf8;
+  color: #020617;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.student-info span {
+  display: block;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.tag.present {
+  color: #22c55e;
+}
+
+.tag.late {
+  color: #facc15;
+}
+
+.tag.absent {
+  color: #ef4444;
+}
+
+/* ACTIONS */
+.actions {
+  margin-left: auto;
+  display: flex;
+  gap: 6px;
+}
+
+.actions button {
+  border: none;
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.present-btn {
+  background: #22c55e;
+}
+
+.late-btn {
+  background: #facc15;
+}
+
+.absent-btn {
+  background: #ef4444;
+  color: white;
+}
+
+/* SAVE */
+.save-btn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 14px;
+  background: #38bdf8;
+  border: none;
+  border-radius: 14px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.glow {
+  box-shadow: 0 0 30px rgba(56, 189, 248, 0.25);
+}

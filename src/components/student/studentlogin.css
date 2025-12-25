@@ -1,0 +1,169 @@
+/* Background animation - cosmic universe vibe */
+.studentlog-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: radial-gradient(circle at 50% 50%, #0f2027, #203a43, #2c5364);
+  position: relative;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+}
+
+/* Floating stars animation */
+.stars-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: transparent url('https://i.ibb.co/k1y0hkh/stars.png') repeat;
+  background-size: cover;
+  animation: moveStars 60s linear infinite;
+  z-index: 0;
+}
+
+@keyframes moveStars {
+  0% { transform: translate(0,0); }
+  100% { transform: translate(-50%, -50%); }
+}
+
+/* Card floating effect */
+.login-card {
+  background: rgba(0,0,0,0.75);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  padding: 3rem;
+  width: 400px;
+  max-width: 90%;
+  text-align: center;
+  box-shadow: 0 0 40px rgba(255,255,255,0.1);
+  z-index: 1;
+  animation: floatCard 6s ease-in-out infinite;
+}
+
+@keyframes floatCard {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.login-image-container {
+  margin-bottom: 1.5rem;
+}
+
+.login-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  animation: pulse 2s infinite alternate;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.1); }
+}
+
+.login-title {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.login-subtitle {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.form-group label span {
+  color: #ff4d6d;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  margin-top: 0.3rem;
+  font-size: 0.95rem;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+  background: rgba(255,255,255,0.2);
+  box-shadow: 0 0 10px #00ffff;
+}
+
+.form-extra {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+}
+
+.btn-login {
+  display: inline-block;
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #00f, #0ff);
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 15px rgba(0,255,255,0.5);
+}
+
+.btn-login:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0,255,255,0.7);
+}
+
+.or-divider {
+  margin: 1rem 0;
+  position: relative;
+  font-size: 0.8rem;
+}
+
+.or-divider span {
+  background: rgba(0,0,0,0.75);
+  padding: 0 0.5rem;
+}
+
+.or-divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: rgba(255,255,255,0.2);
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+.social-login i {
+  font-size: 1.5rem;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #0ff;
+}
+
+.social-login i:hover {
+  color: #ff4d6d;
+  transform: scale(1.3);
+}

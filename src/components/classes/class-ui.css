@@ -1,0 +1,138 @@
+.class-page {
+  padding: 30px;
+}
+
+.class-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(30, 41, 59, 0.65);
+  padding: 20px;
+  border-radius: 18px;
+}
+
+.teacher-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  font-size: 28px;
+}
+
+.class-stats {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 15px;
+}
+
+.stat-card {
+  background: rgba(15, 23, 42, 0.8);
+  padding: 18px;
+  border-radius: 14px;
+  text-align: center;
+}
+
+.class-grid {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.panel {
+  background: rgba(30, 41, 59, 0.65);
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.student-row {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+  gap: 12px;
+}
+
+.student-avatar {
+  width: 40px;
+  height: 40px;
+  background: #38bdf8;
+  color: #020617;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.student-info span {
+  display: block;
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+.badge {
+  margin-left: auto;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+.Active {
+  background: #22c55e;
+}
+
+.Top {
+  background: #38bdf8;
+}
+
+.NeedsHelp {
+  background: #f97316;
+}
+
+.lesson-card {
+  margin-top: 12px;
+}
+
+.progress-bar {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  margin-top: 6px;
+}
+
+.progress-bar div {
+  height: 100%;
+  background: #38bdf8;
+  border-radius: 10px;
+}
+
+table {
+  width: 100%;
+  margin-top: 12px;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+}
+
+thead {
+  background: rgba(56, 189, 248, 0.15);
+}
+
+.active {
+  color: #22c55e;
+}
+
+.pending {
+  color: #facc15;
+}
+
+.glow {
+  box-shadow: 0 0 30px rgba(56, 189, 248, 0.25);
+}

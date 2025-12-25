@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+}
+
+.grade-page {
+  min-height: 100vh;
+  padding: 2rem;
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  color: white;
+  font-family: "Inter", sans-serif;
+}
+
+.grade-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.grade-header h1 {
+  font-size: 2.4rem;
+  animation: glow 2s infinite alternate;
+}
+
+.grade-header p {
+  opacity: 0.7;
+}
+
+/* SUMMARY */
+.grade-summary {
+  display: flex;
+  gap: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 2rem;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+  backdrop-filter: blur(20px);
+}
+
+.grade-circle {
+  position: relative;
+  width: 140px;
+  height: 140px;
+}
+
+.grade-circle svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.grade-circle .bg {
+  fill: none;
+  stroke: #1e293b;
+  stroke-width: 3.8;
+}
+
+.grade-circle .progress {
+  fill: none;
+  stroke: #22c55e;
+  stroke-width: 3.8;
+  stroke-linecap: round;
+  animation: progress 1.5s ease-out;
+}
+
+.grade-circle span {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.grade-info h2 {
+  margin: 0;
+}
+
+.good {
+  color: #22c55e;
+}
+
+.bad {
+  color: #f97316;
+}
+
+/* SUBJECTS */
+.subject-grades {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.subject-card {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 1.2rem;
+  border-radius: 16px;
+  backdrop-filter: blur(15px);
+  animation: float 6s ease-in-out infinite;
+}
+
+.subject-card h3 {
+  margin-bottom: 0.6rem;
+}
+
+.bar {
+  height: 10px;
+  background: #020617;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  background: linear-gradient(90deg, #22c55e, #16a34a);
+  animation: grow 1.2s ease-out;
+}
+
+.score {
+  display: block;
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+
+/* ANIMATIONS */
+@keyframes grow {
+  from { width: 0; }
+}
+
+@keyframes progress {
+  from { stroke-dasharray: 0, 100; }
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px #22c55e; }
+  to { text-shadow: 0 0 25px #22c55e; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .grade-summary {
+    flex-direction: column;
+  }
+}
